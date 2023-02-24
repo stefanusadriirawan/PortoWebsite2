@@ -66,18 +66,18 @@ def contact():
 # lem pemersatu -----------------------------------------------------------------------------
 
 selected = option_menu(
-        menu_title="Menu",
-        options=["About Me", "Portfolio", "Contact Me"],
+        menu_title=None,
+        options=["About", "Project", "Contact"],
         icons=["person-circle", "person-workspace", "telephone"],
         menu_icon="cast",
         orientation="horizontal",
 )
 
-if selected == "About Me":
+if selected == "About":
     about()
-elif selected == "Portfolio":
+elif selected == "Project":
     portfolio()
-elif selected == "Contact Me":
+elif selected == "Contact":
     contact()
 else:
     pass
