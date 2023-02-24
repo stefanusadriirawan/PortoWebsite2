@@ -74,69 +74,36 @@ def project():
 
 def contact():
     # Adding a section for contact information
-    st.header("Reach me out!")
 
     button_email = """
-    <style>
-        #email-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        label {
-            display: block;
-            margin-bottom: 8px;
-            margin-left: -50px;
-        }
-        input[type="email"],
-        input[type="text"],
-        textarea {
-            display: block;
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-bottom: 16px;
-            margin-left: -50px;
-            font-size: 16px;
-        }
-        button[type="submit"] {
-            background-color: #fa4c4c;
-            border: none;
-            border-radius: 25px;
-            color: white;
-            padding: 12px 24px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            width: 200px;
-            margin-left: -50px;
-        }
-        button[type="submit"]:hover {
-            background-color: #47527a;
-            transition: 0.5s ease-out;
-        }
-        button[type="submit"]:not(:hover) {
-            background-color: #fa4c4c;
-            transition: background-color 0.15s ease-in;
-        }
-    </style>
     
-    <form id="email-form" action="/send-email.php" method="POST">
-        <label for="email">Email address:</label> 
-        <input type="email" id="email" name="email" required>
-        <label for="subject">Subject:</label> 
-        <input type="text" id="subject" name="subject" required>
-        <label for="message">Message:</label> 
-        <textarea id="message" name="message" required></textarea> 
-        <button type="submit">Send Email</button>
-    </form>
-
-    
-           """
+            <style>
+              h2 {
+                font-size: 60px;
+                font-weight: bold;
+              }
+              
+              h1 {
+                font-size: 36px;
+              }
+              
+              p {
+                font-size: 25px;
+              }     
+            </style>
+            <h2>
+                Reach me out!
+            </h2>
+                
+            <h1>
+                We can have a nice conversation, here is my email and social media account:
+            </h1>
+           
+            
+            <p>
+               stefanusadriirawan@gmail.com
+            </p>
+            """
     button_whatsapp = """
     <style>
         .button {
