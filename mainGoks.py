@@ -2,13 +2,11 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 
-
-
 # options=["Home", "About", "Skills", "Projects", "Contact"],
 # icons=["house", "person-circle", "code-slash", "person-workspace", "telephone"],
 
 # navbar home -----------------------------------------------------------------------------
-def home():
+def about():
     # Defining the layout
     col1, col2 = st.columns(2)
     with col1:
@@ -24,10 +22,6 @@ def home():
     st.write("---")
 
 
-# navbar about -----------------------------------------------------------------------------
-def about():
-    st.title("About Page")
-    st.write("This is my portfolio website. I'm a Python developer and love creating cool things with Streamlit!")
 
 # navbar skills -----------------------------------------------------------------------------
 def skills():
@@ -60,27 +54,18 @@ def contact():
     - LinkedIn: 
     """)
 
-    image_url = 'github.png'
-    link_url = 'https://github.com/stefanusadriirawan'
 
-    # Display the image
-    st.image(image_url, use_column_width=True)
-
-    # Add a hyperlink to the image
-    st.markdown(f'<a href="{link_url}">Click here to go to the website</a>', unsafe_allow_html=True)
 # lem pemersatu -----------------------------------------------------------------------------
 
 selected = option_menu(
         menu_title="Menu",
-        options=["Home", "About", "Skills", "Projects", "Contact"],
-        icons=["house", "person-circle", "code-slash", "person-workspace", "telephone"],
+        options=["About", "Skills", "Projects", "Contact"],
+        icons=["person-circle", "code-slash", "person-workspace", "telephone"],
         menu_icon="cast",
         orientation="horizontal",
 )
 
-if selected == "Home":
-    home()
-elif selected == "About":
+if selected == "About":
     about()
 elif selected == "Skills":
     skills()
