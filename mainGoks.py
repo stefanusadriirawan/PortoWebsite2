@@ -1,37 +1,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+import webbrowser
 
-github = '''
-           <style>
-                .button-wrapper {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    width: 100px;
-                    height: 50px;
-                    border-radius: 10px;
-                    background-color: #FFFFFF;
-                    box-shadow: 0px 0px 10px #888888;
-                    cursor: pointer;
-                    transition: background-color 0.5s ease;
-                }
-                .button-wrapper:hover {
-                    background-color: #87CEFA;
-                }
-                .button-text {
-                    margin-left: 3px;
-                    font-size: 20px;
-                    font-weight: bold;
-                    color: #000000;
-                }
-            </style>
-            <a href="https://github.com/stefanusadriirawan" style="text-decoration:none;">
-                <div class="button-wrapper">
-                    <span class="button-text">Github</span>
-                </div>
-            </a>
-        '''
 # options=["Home", "About", "Skills", "Projects", "Contact"],
 # icons=["house", "person-circle", "code-slash", "person-workspace", "telephone"],
 
@@ -83,6 +53,11 @@ def project():
     """)
 
 # navbar contact -----------------------------------------------------------------------------
+
+def open_link(url):
+    webbrowser.open_new_tab(url)
+
+
 def contact():
    # Adding a section for contact information
     st.header("Contact")
@@ -91,21 +66,39 @@ def contact():
     - Phone: +1-123-456-7890
     - LinkedIn: 
     """)
-    col1, col2, col3, col4, col5= st.columns(5)
-    with col1:
-        st.markdown(github, unsafe_allow_html=True)
-    with col2:
-        st.markdown(github, unsafe_allow_html=True)
-    with col3:
-        st.markdown(github, unsafe_allow_html=True)
-    with col4:
-        st.markdown(github, unsafe_allow_html=True)
-    with col5:
-        st.markdown(github, unsafe_allow_html=True)
+
+    #st.markdown(github, unsafe_allow_html=True)
 
 
+    github = 'https://github.com/stefanusadriirawan'
+    medium = 'https://medium.com/@stefanusadriirawan'
+    linked_in = 'https://www.linkedin.com/in/stefanus-adri-irawan-5753801b1/'
+    youtube = 'https://www.youtube.com/channel/UC1_vrHzpugdLgZEsjmOUZbQ'
+    tiktok = 'https://www.tiktok.com/@stefanusadriirawan'
+
+    urls = [github, medium, linked_in, youtube, tiktok]
+
+    selected2 = option_menu(
+            menu_title="Social media",
+            options=["Github", "Medium", "Linked in", "Youtube", "TikTok"],
+            icons=["github", "medium", "linkedin", "youtube", "tiktok"],
+            menu_icon="cast",
+            orientation="vertical",
+    )
 
 
+    if selected2 == "Github":
+        open_link(urls[0])
+    elif selected2 == "Medium":
+        open_link(urls[1])
+    elif selected2 == "Linked in":
+        open_link(urls[2])
+    elif selected2 == "Youtube":
+        open_link(urls[3])
+    elif selected2 == "TikTok":
+        open_link(urls[4])
+    else:
+        pass
 
 
 # lem pemersatu -----------------------------------------------------------------------------
