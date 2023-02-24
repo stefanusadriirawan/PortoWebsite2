@@ -40,15 +40,12 @@ def about():
             Make gf cum 6 time in a row
             """)
     st.write("---")
-    st.subheader("Portfolio")
-    st.write("""
-            A glimpse of the projects I've been working on
-            """)
+
 
 # navbar projects -----------------------------------------------------------------------------
-def projects():
+def portfolio():
   # Adding a section for projects
-    st.header("Projects")
+    st.header("Portfolio")
     st.write("""
     - [Project 1](https://github.com/project1)
     - [Project 2](https://github.com/project2)
@@ -70,7 +67,7 @@ def contact():
 
 selected = option_menu(
         menu_title="Menu",
-        options=["About", "Projects", "Contact"],
+        options=["About", "Portfolio", "Contact"],
         icons=["person-circle", "person-workspace", "telephone"],
         menu_icon="cast",
         orientation="horizontal",
@@ -78,8 +75,8 @@ selected = option_menu(
 
 if selected == "About":
     about()
-elif selected == "Projects":
-    projects()
+elif selected == "Portfolio":
+    portfolio()
 elif selected == "Contact":
     contact()
 else:
