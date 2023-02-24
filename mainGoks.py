@@ -68,12 +68,12 @@ def project():
 
 
     images = [
-        ('Deteksi asam lambung', r'E:\Artificial Intelligence\portoWebsite\1.png', 'https://www.linkedin.com/in/stefanus-adri-irawan-5753801b1/'),
-        ('Potong usus jadi sate', r'E:\Artificial Intelligence\portoWebsite\2.png', 'https://github.com/stefanusadriirawan'),
-        ('Mamen', r'E:\Artificial Intelligence\portoWebsite\3.png', 'https://www.tiktok.com/@stefanusadriirawan'),
-        ('UHheuehe', r'E:\Artificial Intelligence\portoWebsite\4.png', 'https://www.youtube.com/channel/UC1_vrHzpugdLgZEsjmOUZbQ'),
-        ('Mulut anjai', r'E:\Artificial Intelligence\portoWebsite\5.png', 'https://medium.com/@stefanusadriirawan'),
-        ('Kek jamur gatau', r'E:\Artificial Intelligence\portoWebsite\6.png', 'https://www.flaticon.com/packs/digestive-system-4'),
+        ('Deteksi asam lambung', '1.png', 'https://www.linkedin.com/in/stefanus-adri-irawan-5753801b1/'),
+        ('Potong usus jadi sate', '2.png', 'https://github.com/stefanusadriirawan'),
+        ('Mamen', '3.png', 'https://www.tiktok.com/@stefanusadriirawan'),
+        ('UHheuehe', '4.png', 'https://www.youtube.com/channel/UC1_vrHzpugdLgZEsjmOUZbQ'),
+        ('Mulut anjai', '5.png', 'https://medium.com/@stefanusadriirawan'),
+        ('Kek jamur gatau', '6.png', 'https://www.flaticon.com/packs/digestive-system-4'),
     ]
 
     # Display the images in a gallery
