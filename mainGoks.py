@@ -76,6 +76,7 @@ def contact():
             font-size: 16px;
             margin: 4px 2px;
             cursor: pointer;
+            width: 200px;
         }
     
         .button:hover {
