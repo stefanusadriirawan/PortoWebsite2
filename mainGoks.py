@@ -32,20 +32,20 @@ def about():
     st.write("---")
     st.subheader("Skills Expertise")
     st.write("""
-            Fuck in the ass
+            Blabla
             """)
     st.write("---")
     st.subheader("Course experience")
     st.write("""
-            Make gf cum 6 time in a row
+            Blabla
             """)
     st.write("---")
 
 
 # navbar projects -----------------------------------------------------------------------------
-def portfolio():
+def project():
   # Adding a section for projects
-    st.header("Portfolio")
+    st.header("Project")
     st.write("""
     - [Project 1](https://github.com/project1)
     - [Project 2](https://github.com/project2)
@@ -76,7 +76,7 @@ selected = option_menu(
 if selected == "About":
     about()
 elif selected == "Project":
-    portfolio()
+    project()
 elif selected == "Contact":
     contact()
 else:
