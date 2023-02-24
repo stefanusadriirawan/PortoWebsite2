@@ -32,29 +32,87 @@ def about():
         st.title("Stefanus Adri Irawan")
         st.subheader("Data Analyst")
         st.write("""
-        Stefanus Adri Irawan is a Data Analyst with expertise in logical and critical thinking, Python programming, SQL, Excel, AppScript, Google Sheets, and Tableau. He is interested in the fields of Data Analysis, Data Science, AI/ML Engineering, and Automation.
+        I am  a Data Analyst with expertise in logical and critical thinking, Python programming, SQL, Excel, AppScript, Google Sheets, and Tableau. I am interested in the fields of Data Analysis, Data Science, AI/ML Engineering, and Automation.
         """)
     st.write("---")
-    st.subheader("Services")
-    st.write("""
-            As a Data Analyst, Stefanus provides services such as data cleaning, transformation, analysis, and visualization. He also develops and implements data-driven solutions to improve business performance and decision-making processes.
-            """)
+    st.header("Services")
+    col1, col2, col3, col4= st.columns(4)
+    with col1:
+        st.image("1.png", width=120)
+        st.subheader("Data Preparation")
+        st.write("Performs data cleaning and transformation by identifying and correcting inaccuracies, inconsistencies, and errors in datasets, and converting raw data into a usable and understandable format.")
+    with col2:
+        st.image("2.png", width=120)
+        st.subheader("Data Analysis")
+        st.write("Provides data analysis services by using statistical methods to explore and draw insights from data, as well as developing predictive models to forecast future outcomes based on historical data.")
+    with col3:
+        st.image("3.png", width=120)
+        st.subheader("Data Visualization")
+        st.write("Offers data visualization services by creating visual representations of data, such as charts, graphs, and dashboards, as well as developing interactive and informative dashboards that provide a high-level view of key metrics and KPIs.")
+    with col4:
+        st.image("4.png", width=120)
+        st.subheader("Data-Driven Solutions")
+        st.write("Delivers data-driven solutions by developing and implementing business intelligence solutions based on data analysis and insights, as well as providing decision support to stakeholders by presenting data in a meaningful and actionable way.")
+
+
+
     st.write("---")
-    st.subheader("Areas Of Interest")
-    st.write("""
-            Stefanus has a strong interest in the field of Data Science and is continuously learning about new technologies and tools to improve his skills. He is also knowledgeable in AI/ML Engineering, which allows him to develop data-driven models and algorithms to solve complex business problems.
-            """)
+    st.header("Areas Of Interest")
+    st.markdown("""
+    <p>
+        I have a strong interest in the field of <b>Data Science</b> and is continuously learning about new technologies and tools to improve my skills. I am also knowledgeable in <b>AI/ML Engineering</b>, which allows me to develop data-driven models and algorithms to solve complex business problems.
+    </p>
+    """, unsafe_allow_html=True)
     st.write("---")
-    st.subheader("Skills Expertise")
-    st.write("""
-            Stefanus is highly skilled in logical and critical thinking, which enables him to analyze data and extract meaningful insights. He is also proficient in Python programming and SQL, which allows him to work with large datasets and perform complex data analysis tasks. Additionally, he is experienced in using Excel, AppScript, Google Sheets, and Tableau for data visualization and reporting.
-            """)
+    st.header("Skills Expertise")
+    col1, col2= st.columns(2)
+    with col1:
+        st.subheader("Skills:")
+        st.write("Logical and critical thinking")
+        st.progress(95)
+        st.write("Analyzing data and extracting meaningful insights")
+        st.progress(80)
+        st.write("Python programming")
+        st.progress(85)
+        st.write("SQL")
+        st.progress(80)
+        st.write("Working with large datasets")
+        st.progress(87)
+        st.write("Performing complex data analysis tasks")
+        st.progress(91)
+        st.write("Data visualization")
+        st.progress(85)
+        st.write("Reporting")
+        st.progress(100)
+    with col2:
+        st.subheader("Tools:")
+        st.write("Excel")
+        st.progress(95)
+        st.write("AppScript")
+        st.progress(87)
+        st.write("Google Sheets")
+        st.progress(91)
+        st.write("Tableau")
+        st.progress(85)
+        st.write("PyCharm")
+        st.progress(100)
+        st.write("Jupyter Notebook")
+        st.progress(85)
+        st.write("VBA")
+        st.progress(80)
+
     st.write("---")
-    st.subheader("Course experience")
-    st.write("""
-            Stefanus has completed several courses related to Data Analysis and Data Science, including courses in Python programming, SQL, Machine Learning, and Data Visualization. He also has hands-on experience working on various projects, including predictive modeling, data visualization, and data analysis.
-            """)
+    st.header("Course experience")
+    st.error("Python programming for data science involves using Python as a tool for data manipulation, analysis, and visualization, typically using libraries such as NumPy, Pandas, Matplotlib, and Seaborn.")
+    st.error("Data science course using SQL could involve analyzing customer behavior and purchasing patterns using transactional data from an e-commerce website.")
+    st.error("Data science course using Machine Learning could involve developing a recommendation engine for a video streaming platform using collaborative filtering algorithms.")
+    st.error("A real world case of a data science project using Data Visualization could involve creating an interactive dashboard to track and analyze the performance of marketing campaigns across different channels.")
     st.write("---")
+    st.header("Project experience")
+    st.error("Data science project using Predictive modeling could involve building a fraud detection model using supervised learning algorithms to identify and prevent fraudulent transactions in a financial institution.")
+    st.error("Data science project using Data analysis could involve exploring and analyzing customer reviews and ratings of a product to identify trends, patterns, and areas for improvement.")
+    st.write("---")
+
 
 
 # navbar projects -----------------------------------------------------------------------------
