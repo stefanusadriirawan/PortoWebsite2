@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 from flask import Flask, request, jsonify
+from PIL import Image
 
 app = Flask(__name__)
 
@@ -62,11 +63,58 @@ def about():
 def project():
   # Adding a section for projects
     st.header("Project")
-    st.write("""
-    - [Project 1](https://github.com/project1)
-    - [Project 2](https://github.com/project2)
-    - [Project 3](https://github.com/project3)
-    """)
+    # List of image URLs
+  # Define the images you want to display
+
+
+    images = [
+        ('Deteksi asam lambung', r'E:\Artificial Intelligence\portoWebsite\1.png', 'https://www.linkedin.com/in/stefanus-adri-irawan-5753801b1/'),
+        ('Potong usus jadi sate', r'E:\Artificial Intelligence\portoWebsite\2.png', 'https://github.com/stefanusadriirawan'),
+        ('Mamen', r'E:\Artificial Intelligence\portoWebsite\3.png', 'https://www.tiktok.com/@stefanusadriirawan'),
+        ('UHheuehe', r'E:\Artificial Intelligence\portoWebsite\4.png', 'https://www.youtube.com/channel/UC1_vrHzpugdLgZEsjmOUZbQ'),
+        ('Mulut anjai', r'E:\Artificial Intelligence\portoWebsite\5.png', 'https://medium.com/@stefanusadriirawan'),
+        ('Kek jamur gatau', r'E:\Artificial Intelligence\portoWebsite\6.png', 'https://www.flaticon.com/packs/digestive-system-4'),
+    ]
+
+    # Display the images in a gallery
+    col1, col2, col3 = st.columns(3)
+    for i, image in enumerate(images):
+        with eval(f"col{i % 3 + 1}"):
+            img = Image.open(image[1])
+            st.image(img, caption=image[0], use_column_width=True)
+
+            # Add a button or link to make the image clickable
+            st.markdown(f"""
+                    <style>
+                            .button{i+1} {{
+                                background-color: #fa4c4c;
+                                border: none;
+                                border-radius: 25px;
+                                color: white;
+                                padding: 12px 24px;
+                                text-align: center;
+                                text-decoration: none;
+                                display: inline-block;
+                                font-size: 16px;
+                                margin: 4px 2px;
+                                cursor: pointer;
+                                width: 210px;
+                            }}
+    
+                            .button{i+1}:hover {{
+                                background-color: #47527a;
+                                transition: 0.5s ease-out;
+                            }}
+                            .button{i+1}:not(:hover) {{
+                                background-color: #fa4c4c;
+                                transition: background-color 0.15s ease-in;
+                            }}
+                    </style>
+                    <a href="{image[2]}" target="_blank">
+                        <button class="button{i+1}">Go to project no. {i+1}</button>
+                    </a>
+                       """, unsafe_allow_html=True)
+
 
 # navbar contact -----------------------------------------------------------------------------
 
