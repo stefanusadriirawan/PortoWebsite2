@@ -2,3 +2,4 @@ streamlit==1.18.1
 streamlit-lottie==0.0.3
 streamlit-option-menu==0.3.2
 streamlit-player==0.1.5
+st-clickable-images==0.0.3
