@@ -63,6 +63,11 @@ def about():
 def project():
   # Adding a section for projects
     st.header("Project")
+    st.markdown("""
+    <br>
+    <br>
+    
+    """, unsafe_allow_html=True)
     # List of image URLs
   # Define the images you want to display
 
@@ -113,6 +118,10 @@ def project():
                     <a href="{image[2]}" target="_blank">
                         <button class="button{i+1}">Go to project no. {i+1}</button>
                     </a>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                        """, unsafe_allow_html=True)
 
 
