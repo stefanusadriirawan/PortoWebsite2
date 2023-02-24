@@ -3,4 +3,4 @@ streamlit-lottie==0.0.3
 streamlit-option-menu==0.3.2
 streamlit-player==0.1.5
 st-clickable-images==0.0.3
-flask==2.23
+flask
