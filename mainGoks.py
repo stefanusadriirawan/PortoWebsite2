@@ -1,8 +1,25 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+from flask import Flask, request, jsonify
 
-# options=["Home", "About", "Skills", "Projects", "Contact"],
-# icons=["house", "person-circle", "code-slash", "person-workspace", "telephone"],
+app = Flask(__name__)
+
+def my_python_function(data):
+    # process the data and return a result
+    return {'message': 'Hello, {}!'.format(data['name'])}
+
+
+@app.route('/my-route', methods=['POST'])
+def my_route():
+    # handle request data
+    data = request.get_json()
+
+    # call Python functions
+    result = my_python_function(data)
+
+    # return response data
+    return jsonify(result)
+
 
 # navbar home -----------------------------------------------------------------------------
 def about():
@@ -59,9 +76,67 @@ def contact():
     # Adding a section for contact information
     st.header("Reach me out!")
 
+    button_email = """
+    <style>
+        #email-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            margin-left: -50px;
+        }
+        input[type="email"],
+        input[type="text"],
+        textarea {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 16px;
+            margin-left: -50px;
+            font-size: 16px;
+        }
+        button[type="submit"] {
+            background-color: #fa4c4c;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 200px;
+            margin-left: -50px;
+        }
+        button[type="submit"]:hover {
+            background-color: #47527a;
+            transition: 0.5s ease-out;
+        }
+        button[type="submit"]:not(:hover) {
+            background-color: #fa4c4c;
+            transition: background-color 0.15s ease-in;
+        }
+    </style>
+    
+    <form id="email-form" action="/send-email.php" method="POST">
+        <label for="email">Email address:</label> 
+        <input type="email" id="email" name="email" required>
+        <label for="subject">Subject:</label> 
+        <input type="text" id="subject" name="subject" required>
+        <label for="message">Message:</label> 
+        <textarea id="message" name="message" required></textarea> 
+        <button type="submit">Send Email</button>
+    </form>
 
-    button_clicked = False
-
+    
+           """
     button_whatsapp = """
     <style>
         .button {
@@ -241,8 +316,7 @@ def contact():
     </a>
        """
 
-
-
+    st.markdown(button_email, unsafe_allow_html=True)
     st.markdown(button_whatsapp, unsafe_allow_html=True)
     st.markdown(button_github, unsafe_allow_html=True)
     st.markdown(button_medium, unsafe_allow_html=True)
