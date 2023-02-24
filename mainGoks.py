@@ -88,7 +88,7 @@ def contact():
               }
               
               p {
-                font-size: 25px;
+                font-size: 20px;
               }     
             </style>
             <h2>
@@ -124,12 +124,10 @@ def contact():
         .button:hover {
             background-color: #47527a;
             transition: 0.5s ease-out;
-            font-size: 20px;
         }
         .button:not(:hover) {
             background-color: #fa4c4c;
             transition: background-color 0.15s ease-in;
-            font-size: 20px;
         }
     </style>
     <a href="https://wa.me/6281310803571" target="_blank">
