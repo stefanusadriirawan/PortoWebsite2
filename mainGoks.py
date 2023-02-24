@@ -1,6 +1,5 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-import webbrowser
 
 # options=["Home", "About", "Skills", "Projects", "Contact"],
 # icons=["house", "person-circle", "code-slash", "person-workspace", "telephone"],
@@ -54,51 +53,82 @@ def project():
 
 # navbar contact -----------------------------------------------------------------------------
 
-def open_link(url):
-    webbrowser.open_new_tab(url)
 
 
 def contact():
    # Adding a section for contact information
-    st.header("Contact")
-    st.write("""
-    - Email: john.doe@email.com
-    - Phone: +1-123-456-7890
-    - LinkedIn: 
-    """)
+    st.header("Get In Touch With Me!")
+    contact_form= """
+    <style>
+    /* Style inputs with type="text", select elements and textareas */
+    input[type=text], input[type=email], textarea {
+      width: 100%; /* Full width */
+      padding: 12px; /* Some padding */ 
+      border: 1px solid #ccc; /* Gray border */
+      border-radius: 4px; /* Rounded borders */
+      box-sizing: border-box; /* Make sure that padding and width stays in place */
+      margin-top: 6px; /* Add a top margin */
+      margin-bottom: 16px; /* Bottom margin */
+      resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    }
+    
+    /* Style the submit button with a specific background color etc */
+    button[type=submit] {
+      background-color: #fa4c4c;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.5s; /* Add a transition effect with a duration of 0.5s */
+    }
+    
+    /* When moving the mouse over the submit button, add a darker green color */
+    button[type=submit]:hover {
+      background-color: #47527a;
+    }
+    </style>
 
-    #st.markdown(github, unsafe_allow_html=True)
+    <form action="https://formsubmit.co/stefanusadriirawan@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Insert Name"></textarea>
+    <input type="email" name="email" placeholder="Insert Email"></textarea>
+    <textarea name="message" placeholder="Details of your problem"></textarea>
+    <button type="submit">Send</button>
+    </form>
+    <br>
+    """
+    st.markdown(contact_form, unsafe_allow_html=True)
+
+    # Add a button to trigger the redirect
 
 
-    github = 'https://github.com/stefanusadriirawan'
-    medium = 'https://medium.com/@stefanusadriirawan'
-    linked_in = 'https://www.linkedin.com/in/stefanus-adri-irawan-5753801b1/'
-    youtube = 'https://www.youtube.com/channel/UC1_vrHzpugdLgZEsjmOUZbQ'
-    tiktok = 'https://www.tiktok.com/@stefanusadriirawan'
-
-    urls = [github, medium, linked_in, youtube, tiktok]
-
-    selected2 = option_menu(
-            menu_title="Social media",
-            options=["Github", "Medium", "Linked in", "Youtube", "TikTok"],
-            icons=["github", "medium", "linkedin", "youtube", "tiktok"],
-            menu_icon="cast",
-            orientation="vertical",
-    )
-
-
-    if selected2 == "Github":
-        open_link(urls[0])
-    elif selected2 == "Medium":
-        open_link(urls[1])
-    elif selected2 == "Linked in":
-        open_link(urls[2])
-    elif selected2 == "Youtube":
-        open_link(urls[3])
-    elif selected2 == "TikTok":
-        open_link(urls[4])
+    if st.button("Whatsapp"):
+        st.markdown('''
+                          <meta http-equiv="refresh" content="0;url=https://wa.me/6281310803571">
+                          ''', unsafe_allow_html=True)
+    elif st.button("Github"):
+        st.markdown('''
+                           <meta http-equiv="refresh" content="0;url=https://github.com/stefanusadriirawan">
+                           ''', unsafe_allow_html=True)
+    elif st.button("Medium"):
+        st.markdown('''
+                               <meta http-equiv="refresh" content="0;url=https://medium.com/@stefanusadriirawan">
+                               ''', unsafe_allow_html=True)
+    elif st.button("Linked in"):
+        st.markdown('''
+                                   <meta http-equiv="refresh" content="0;url=https://www.linkedin.com/in/stefanus-adri-irawan-5753801b1">
+                                   ''', unsafe_allow_html=True)
+    elif st.button("Youtube"):
+        st.markdown('''
+                                   <meta http-equiv="refresh" content="0;url=https://www.youtube.com/channel/UC1_vrHzpugdLgZEsjmOUZbQ">
+                                   ''', unsafe_allow_html=True)
+    elif st.button("TikTok"):
+        st.markdown('''
+                                   <meta http-equiv="refresh" content="0;url=https://www.tiktok.com/@stefanusadriirawan">
+                                   ''', unsafe_allow_html=True)
     else:
         pass
+
 
 
 # lem pemersatu -----------------------------------------------------------------------------
