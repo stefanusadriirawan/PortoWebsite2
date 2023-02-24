@@ -67,17 +67,17 @@ def contact():
 
 selected = option_menu(
         menu_title="Menu",
-        options=["About", "Portfolio", "Contact"],
+        options=["About Me", "Portfolio", "Contact Me"],
         icons=["person-circle", "person-workspace", "telephone"],
         menu_icon="cast",
         orientation="horizontal",
 )
 
-if selected == "About":
+if selected == "About Me":
     about()
 elif selected == "Portfolio":
     portfolio()
-elif selected == "Contact":
+elif selected == "Contact Me":
     contact()
 else:
     pass
