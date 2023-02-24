@@ -56,80 +56,101 @@ def project():
 
 
 def contact():
-   # Adding a section for contact information
-    st.header("Get In Touch With Me!")
-    contact_form= """
+    # Adding a section for contact information
+    st.header("Reach me out!")
+
+
+    button_clicked = False
+
+    button_whatsapp = """
     <style>
-    /* Style inputs with type="text", select elements and textareas */
-    input[type=text], input[type=email], textarea {
-      width: 100%; /* Full width */
-      padding: 12px; /* Some padding */ 
-      border: 1px solid #ccc; /* Gray border */
-      border-radius: 4px; /* Rounded borders */
-      box-sizing: border-box; /* Make sure that padding and width stays in place */
-      margin-top: 6px; /* Add a top margin */
-      margin-bottom: 16px; /* Bottom margin */
-      resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-    }
+        .button {
+            background-color: #fa4c4c;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
     
-    /* Style the submit button with a specific background color etc */
-    button[type=submit] {
-      background-color: #fa4c4c;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.5s; /* Add a transition effect with a duration of 0.5s */
-    }
-    
-    /* When moving the mouse over the submit button, add a darker green color */
-    button[type=submit]:hover {
-      background-color: #47527a;
-    }
+        .button:hover {
+            background-color: #47527a;
+            transition: 0.5s ease-out;
+        }
+        .button:not(:hover) {
+            background-color: #fa4c4c;
+            transition: background-color 0.15s ease-in;
+        }
     </style>
+    <a href="https://wa.me/6281310803571" target="_blank">
+        <button class="button">Whatsapp me</button>
+    </a>
+       """
+    button_github = """
+    <style>
+        .button {
+            background-color: #fa4c4c;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    
+        .button:hover {
+            background-color: #47527a;
+            transition: 0.5s ease-out;
+        }
+        .button:not(:hover) {
+            background-color: #fa4c4c;
+            transition: background-color 0.15s ease-in;
+        }
+    </style>
+    
+    <button class="button" type="submit">Github</button>
+       """
+    button_githuasdb = """
+           <button onclick="window.location.href='https://github.com/stefanusadriirawan'" style="background-color: #333333; border-radius: 4px; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin-right: 10px;">Github</button>
+       """
 
-    <form action="https://formsubmit.co/stefanusadriirawan@gmail.com" method="POST">
-    <input type="text" name="name" placeholder="Insert Name"></textarea>
-    <input type="email" name="email" placeholder="Insert Email"></textarea>
-    <textarea name="message" placeholder="Details of your problem"></textarea>
-    <button type="submit">Send</button>
-    </form>
-    <br>
-    """
-    st.markdown(contact_form, unsafe_allow_html=True)
+    button_medium = """
+           <button onclick="window.location.href='https://medium.com/@stefanusadriirawan'" style="background-color: #00ab6c; border-radius: 4px; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin-right: 10px;">Medium</button>
+       """
 
-    # Add a button to trigger the redirect
+    button_linkedin = """
+           <button onclick="window.location.href='https://www.linkedin.com/in/stefanus-adri-irawan-5753801b1'" style="background-color: #0077B5; border-radius: 4px; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin-right: 10px;">LinkedIn</button>
+       """
 
+    button_youtube = """
+           <button onclick="window.location.href='https://www.youtube.com/channel/UC1_vrHzpugdLgZEsjmOUZbQ'" style="background-color: #FF0000; border-radius: 4px; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin-right: 10px;">Youtube</button>
+       """
 
-    if st.button("Whatsapp"):
-        st.markdown('''
-                          <meta http-equiv="refresh" content="0;url=https://wa.me/6281310803571">
-                          ''', unsafe_allow_html=True)
-    elif st.button("Github"):
-        st.markdown('''
-                           <meta http-equiv="refresh" content="0;url=https://github.com/stefanusadriirawan">
-                           ''', unsafe_allow_html=True)
-    elif st.button("Medium"):
-        st.markdown('''
-                               <meta http-equiv="refresh" content="0;url=https://medium.com/@stefanusadriirawan">
-                               ''', unsafe_allow_html=True)
-    elif st.button("Linked in"):
-        st.markdown('''
-                                   <meta http-equiv="refresh" content="0;url=https://www.linkedin.com/in/stefanus-adri-irawan-5753801b1">
-                                   ''', unsafe_allow_html=True)
-    elif st.button("Youtube"):
-        st.markdown('''
-                                   <meta http-equiv="refresh" content="0;url=https://www.youtube.com/channel/UC1_vrHzpugdLgZEsjmOUZbQ">
-                                   ''', unsafe_allow_html=True)
-    elif st.button("TikTok"):
-        st.markdown('''
-                                   <meta http-equiv="refresh" content="0;url=https://www.tiktok.com/@stefanusadriirawan">
-                                   ''', unsafe_allow_html=True)
-    else:
-        pass
+    button_tiktok = """
+           <button onclick="window.location.href='https://www.tiktok.com/@stefanusadriirawan'" style="background-color: #000000; border-radius: 4px; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin-right: 10px;">TikTok</button>
+       """
 
 
+
+
+    if button_clicked:
+        st.write("Button clicked!")
+
+    st.markdown(button_whatsapp, unsafe_allow_html=True)
+    st.markdown(button_github, unsafe_allow_html=True)
+    st.markdown(button_medium, unsafe_allow_html=True)
+    st.markdown(button_linkedin, unsafe_allow_html=True)
+    st.markdown(button_youtube, unsafe_allow_html=True)
+    st.markdown(button_tiktok, unsafe_allow_html=True)
 
 # lem pemersatu -----------------------------------------------------------------------------
 
