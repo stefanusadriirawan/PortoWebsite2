@@ -1,23 +1,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-selected = option_menu(
-        menu_title="Menu",
-        options=["Home", "About", "Skills", "Projects", "Contact"],
-        icons=["house", "person-circle", "code-slash", "person-workspace", "telephone"],
 
-)
-
-if selected == "Home":
-    st.write("Home")
-elif selected == "About":
-    st.write("About")
-elif selected == "Skills":
-    st.write("Skills")
-elif selected == "Projects":
-    st.write("Projects")
-elif selected == "Contact":
-    st.write("Contact")
 
 
 # options=["Home", "About", "Skills", "Projects", "Contact"],
@@ -86,44 +70,23 @@ def contact():
     st.markdown(f'<a href="{link_url}">Click here to go to the website</a>', unsafe_allow_html=True)
 # lem pemersatu -----------------------------------------------------------------------------
 
+selected = option_menu(
+        menu_title="Menu",
+        options=["Home", "About", "Skills", "Projects", "Contact"],
+        icons=["house", "person-circle", "code-slash", "person-workspace", "telephone"],
+        menu_icon="cast",
+        orientation="horizontal",
+)
 
-
-with st.container():
-    with st.expander("Main Menu"):
-        home_button = st.button("Home", key="home")
-        about_button = st.button("About", key="about")
-        skills_button = st.button("Skills", key="skills")
-        projects_button = st.button("Projects", key="projects")
-        contact_button = st.button("Contact", key="contact")
-
-# Get the current query parameters
-params = st.experimental_get_query_params()
-
-
-# Check if the page parameter is not set or set to "home"
-if "page" not in params:
-    home_button = True
-else:
-    home_button = False
-
-if home_button:
-    st.experimental_set_query_params(page="home")
+if selected == "Home":
     home()
-elif about_button:
-    st.experimental_set_query_params(page="about")
+elif selected == "About":
     about()
-elif skills_button:
-    st.experimental_set_query_params(page="skills")
+elif selected == "Skills":
     skills()
-elif projects_button:
-    st.experimental_set_query_params(page="projects")
+elif selected == "Projects":
     projects()
-elif contact_button:
-    st.experimental_set_query_params(page="contact")
+elif selected == "Contact":
     contact()
 else:
-    st.experimental_set_query_params(page="home")
-    home()
-
-
-
+    pass
