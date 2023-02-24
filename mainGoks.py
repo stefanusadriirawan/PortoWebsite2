@@ -32,29 +32,27 @@ def about():
         st.title("Stefanus Adri Irawan")
         st.subheader("Data Analyst")
         st.write("""
-        I am an experienced web developer with expertise in Python, Flask, Django, and React. 
-        I have worked on several projects for clients from various industries, including healthcare, finance, and e-commerce. 
-        In my free time, I like to contribute to open-source projects and learn new technologies. 
+        Stefanus Adri Irawan is a Data Analyst with expertise in logical and critical thinking, Python programming, SQL, Excel, AppScript, Google Sheets, and Tableau. He is interested in the fields of Data Analysis, Data Science, AI/ML Engineering, and Automation.
         """)
     st.write("---")
     st.subheader("Services")
     st.write("""
-            My expertise can be used to clean, analyse, interpret and visualize your data.
+            As a Data Analyst, Stefanus provides services such as data cleaning, transformation, analysis, and visualization. He also develops and implements data-driven solutions to improve business performance and decision-making processes.
             """)
     st.write("---")
     st.subheader("Areas Of Interest")
     st.write("""
-            Take a look at some of the things I love working on.
+            Stefanus has a strong interest in the field of Data Science and is continuously learning about new technologies and tools to improve his skills. He is also knowledgeable in AI/ML Engineering, which allows him to develop data-driven models and algorithms to solve complex business problems.
             """)
     st.write("---")
     st.subheader("Skills Expertise")
     st.write("""
-            Blabla
+            Stefanus is highly skilled in logical and critical thinking, which enables him to analyze data and extract meaningful insights. He is also proficient in Python programming and SQL, which allows him to work with large datasets and perform complex data analysis tasks. Additionally, he is experienced in using Excel, AppScript, Google Sheets, and Tableau for data visualization and reporting.
             """)
     st.write("---")
     st.subheader("Course experience")
     st.write("""
-            Blabla
+            Stefanus has completed several courses related to Data Analysis and Data Science, including courses in Python programming, SQL, Machine Learning, and Data Visualization. He also has hands-on experience working on various projects, including predictive modeling, data visualization, and data analysis.
             """)
     st.write("---")
 
