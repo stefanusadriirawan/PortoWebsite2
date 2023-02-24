@@ -20,20 +20,31 @@ def about():
         In my free time, I like to contribute to open-source projects and learn new technologies. 
         """)
     st.write("---")
-
-
-
-# navbar skills -----------------------------------------------------------------------------
-def skills():
-# Adding a section for skills
-    st.header("Skills")
+    st.subheader("Services")
     st.write("""
-    - Python
-    - Flask
-    - Django
-    - React
-    - HTML/CSS
-    """)
+            My expertise can be used to clean, analyse, interpret and visualize your data.
+            """)
+    st.write("---")
+    st.subheader("Areas Of Interest")
+    st.write("""
+            Take a look at some of the things I love working on.
+            """)
+    st.write("---")
+    st.subheader("Skills Expertise")
+    st.write("""
+            Fuck in the ass
+            """)
+    st.write("---")
+    st.subheader("Course experience")
+    st.write("""
+            Make gf cum 6 time in a row
+            """)
+    st.write("---")
+    st.subheader("Portfolio")
+    st.write("""
+            A glimpse of the projects I've been working on
+            """)
+
 # navbar projects -----------------------------------------------------------------------------
 def projects():
   # Adding a section for projects
@@ -59,16 +70,14 @@ def contact():
 
 selected = option_menu(
         menu_title="Menu",
-        options=["About", "Skills", "Projects", "Contact"],
-        icons=["person-circle", "code-slash", "person-workspace", "telephone"],
+        options=["About", "Projects", "Contact"],
+        icons=["person-circle", "person-workspace", "telephone"],
         menu_icon="cast",
         orientation="horizontal",
 )
 
 if selected == "About":
     about()
-elif selected == "Skills":
-    skills()
 elif selected == "Projects":
     projects()
 elif selected == "Contact":
