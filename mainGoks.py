@@ -116,34 +116,131 @@ def contact():
             transition: background-color 0.15s ease-in;
         }
     </style>
-    
-    <button class="button" type="submit">Github</button>
+    <a href="https://github.com/stefanusadriirawan" target="_blank">
+        <button class="button">GitHub</button>
+    </a>
        """
-    button_githuasdb = """
-           <button onclick="window.location.href='https://github.com/stefanusadriirawan'" style="background-color: #333333; border-radius: 4px; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin-right: 10px;">Github</button>
-       """
-
     button_medium = """
-           <button onclick="window.location.href='https://medium.com/@stefanusadriirawan'" style="background-color: #00ab6c; border-radius: 4px; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin-right: 10px;">Medium</button>
+    <style>
+        .button {
+            background-color: #fa4c4c;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    
+        .button:hover {
+            background-color: #47527a;
+            transition: 0.5s ease-out;
+        }
+        .button:not(:hover) {
+            background-color: #fa4c4c;
+            transition: background-color 0.15s ease-in;
+        }
+    </style>
+    <a href="https://medium.com/@stefanusadriirawan" target="_blank">
+        <button class="button">Medium</button>
+    </a>
        """
 
     button_linkedin = """
-           <button onclick="window.location.href='https://www.linkedin.com/in/stefanus-adri-irawan-5753801b1'" style="background-color: #0077B5; border-radius: 4px; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin-right: 10px;">LinkedIn</button>
+    <style>
+        .button {
+            background-color: #fa4c4c;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    
+        .button:hover {
+            background-color: #47527a;
+            transition: 0.5s ease-out;
+        }
+        .button:not(:hover) {
+            background-color: #fa4c4c;
+            transition: background-color 0.15s ease-in;
+        }
+    </style>
+    <a href="https://www.linkedin.com/in/stefanus-adri-irawan-5753801b1" target="_blank">
+        <button class="button">LinkedIn</button>
+    </a>
        """
 
     button_youtube = """
-           <button onclick="window.location.href='https://www.youtube.com/channel/UC1_vrHzpugdLgZEsjmOUZbQ'" style="background-color: #FF0000; border-radius: 4px; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin-right: 10px;">Youtube</button>
+    <style>
+        .button {
+            background-color: #fa4c4c;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    
+        .button:hover {
+            background-color: #47527a;
+            transition: 0.5s ease-out;
+        }
+        .button:not(:hover) {
+            background-color: #fa4c4c;
+            transition: background-color 0.15s ease-in;
+        }
+    </style>
+    <a href="https://www.youtube.com/channel/UC1_vrHzpugdLgZEsjmOUZbQ" target="_blank">
+        <button class="button">YouTube</button>
+    </a>
        """
 
     button_tiktok = """
-           <button onclick="window.location.href='https://www.tiktok.com/@stefanusadriirawan'" style="background-color: #000000; border-radius: 4px; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin-right: 10px;">TikTok</button>
+    <style>
+        .button {
+            background-color: #fa4c4c;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    
+        .button:hover {
+            background-color: #47527a;
+            transition: 0.5s ease-out;
+        }
+        .button:not(:hover) {
+            background-color: #fa4c4c;
+            transition: background-color 0.15s ease-in;
+        }
+    </style>
+    <a href="https://www.tiktok.com/@stefanusadriirawan" target="_blank">
+        <button class="button">TikTok</button>
+    </a>
        """
 
 
-
-
-    if button_clicked:
-        st.write("Button clicked!")
 
     st.markdown(button_whatsapp, unsafe_allow_html=True)
     st.markdown(button_github, unsafe_allow_html=True)
